@@ -35,6 +35,11 @@
 <title>달력페이지</title>
 </head>
 <body>
+	<script type="text/javascript">
+		$(function(){
+			alert('3333');
+		});
+	</script>
 
 	<!-- Header -->
 	<div id="FrameHeader">
