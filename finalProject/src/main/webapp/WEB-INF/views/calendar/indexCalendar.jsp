@@ -45,7 +45,7 @@ $(function({
 <body>
 	<script type="text/javascript">
 		$(function(){
-			alert('888888');
+			alert('121212121212121');
 		});
 	</script>
 
