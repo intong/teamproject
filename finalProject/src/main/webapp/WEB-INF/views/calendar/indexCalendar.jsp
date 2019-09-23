@@ -35,7 +35,11 @@
 <title>달력페이지</title>
 </head>
 <body>
-
+	<script type="text/javascript">
+		$(function(){
+			alert('승현아 보아라~~~');
+		});
+	</script>
 	<!-- Header -->
 	<div id="FrameHeader">
 		<div id="ContainerHeader">
