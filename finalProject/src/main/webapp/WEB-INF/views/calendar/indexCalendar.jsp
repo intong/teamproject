@@ -36,18 +36,10 @@
 </head>
 <script type="text/javascript">
 
-$(function({
-	
-	alert('6666');
-});
+
 
 </script>
 <body>
-	<script type="text/javascript">
-		$(function(){
-			alert('33333');
-		});
-	</script>
 
 	<!-- Header -->
 	<div id="FrameHeader">
