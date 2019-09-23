@@ -36,7 +36,7 @@
 </head>
 <body>
 	<script type="text/javascript">
-		$(function(){
+		$(function(){ 
 			alert('승현아 보아라~~~');
 		});
 	</script>
