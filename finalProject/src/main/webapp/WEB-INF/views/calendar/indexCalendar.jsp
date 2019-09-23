@@ -34,6 +34,14 @@
 
 <title>달력페이지</title>
 </head>
+<script type="text/javascript">
+
+$(function({
+	
+	alert(1);
+});
+
+</script>
 <body>
 
 	<!-- Header -->
