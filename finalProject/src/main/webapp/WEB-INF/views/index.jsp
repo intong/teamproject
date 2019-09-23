@@ -23,6 +23,7 @@
 	<c:if test="${result != null }">
 		<script type="text/javascript">
 			alert('${result}');
+			
 		</script> 
 	</c:if>
 	<div id="indexLoginBackground">
