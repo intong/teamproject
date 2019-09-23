@@ -34,11 +34,6 @@
 
 <title>달력페이지</title>
 </head>
-<script type="text/javascript">
-
-
-
-</script>
 <body>
 
 	<!-- Header -->
