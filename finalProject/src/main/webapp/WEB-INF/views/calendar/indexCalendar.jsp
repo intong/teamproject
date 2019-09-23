@@ -38,7 +38,7 @@
 
 $(function({
 	
-	alert('4444');
+	alert('6666');
 });
 
 </script>
