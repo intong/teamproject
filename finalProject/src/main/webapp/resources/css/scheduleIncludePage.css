@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+/*
+	#FrameContent{background-color:rgba(225,225,225,0.8);width:100%; height: 1200px;}
+	#ContainerContent{background-color:rgba(225,225,225,0.9); width:1000px;height: 1200px; margin: 0 auto;}
+*/
+
+
+/* 페이지 전체 프레임 사이즈*/
+#scheduleIncludePageFrame{width:1000px;height: 1000px;}
+
+/* 달력 디자인 */
+#scheduleCalendar{background-color:lightgreen; width:1000px;height: 600px;}
+
+
+/* 스케줄 게시판 디자인 */
+#scheduleBoard{ width:1000px; height: 500px;}
+#scheduleBoardFrame{width:800px; height:150px; padding-top:30px; margin-left: auto; margin-right: auto;}
+.boardHeader{font-size: 30px;}
+.bcTime{width:200px; height: 50px;text-align: center;}
+.bcContent{width:400px; height: 50px;text-align: center;}
+.bcPartner{width:200px; height: 50px;text-align: center;}
+
+
+
+
+

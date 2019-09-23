@@ -1,0 +1,57 @@
+@charset "UTF-8";
+
+/*
+	font-size:
+		기본 폰트 사이즈 : 12px
+		menu list 폰트 사이즈 : 15px
+		Logo 폰트 사이즈 : 50px
+	
+	background color : ????
+*/
+
+
+
+	/* layout Frame Design */
+#FrameHeader{width:100%; height: 300px;}
+#FrameContent{background-color:rgba(225,225,225,0.8);width:100%; height: 1100px;}
+#FrameFooter{width:100%; height: 100px;}
+
+	/* layout Container(내용 들어갈 자리) */
+#ContainerHeader{width:1000px;height: 300px; margin: 0 auto;position:relative;}
+#ContainerContent{background-color:rgba(225,225,225,0.9); width:1000px;height: 1100px; margin: 0 auto;}
+#ContainerFooter{width:1000px;height: 100px;margin: 0 auto;}
+
+	/* Header Design */
+/*Header Layout*/
+#BTNsDIV{width:200px;height: 30px;position:absolute;left:30px;top:5px;}
+#logoDIV{width:500px;height: 100px;position:absolute;top:100px;}
+#logoDIV:hover{cursor: pointer;}
+#menuDIV{width:550px;height: 100px;position:absolute;left: 500px;}
+#loginDIV{width:500px;height: 50px;position:absolute;left: 500px;top:190px;}
+
+/*로고*/
+#logoBig{float:left; width:200px; height: 60px;margin-top:20px;font-size: 50px;font-weight:bold;letter-spacing:10px; text-align: center;line-height: 60px;}
+#logoSmall{float:left;width:300px; height: 40px;margin-top:40px;font-size:25px;font-weight: bold;letter-spacing: 3px;text-align: left;line-height: 40px;}
+
+/*메뉴리스트*/
+#menuDIV_ul{margin-left: 80px;}
+.menuDIV_li{width:120px; height:100px;float:left;margin-right: 20px;text-align:center;font-size:15px;font-weight:bold;color:black;letter-spacing:5px; line-height:150px;}
+.home{text-align: right;}
+
+/*날짜 날씨 로그인 정보*/
+#weatherIMG{width:50px;height: 50px;position:absolute;right:430px;margin-top: 15px;}
+#imgweather{background-color:#e6ecff; max-width: 50px; max-height: 45px;border-radius:10px; }
+#temp{width:100px;height: 50px;font-size: 15px;text-align: right;line-height: 80px;position:absolute;right:340px;}
+#today{width:150px;height: 50px;font-size: 15px;text-align: center;line-height: 80px;position:absolute;right:170px;}
+#memberID{width:150px;height: 50px;font-size: 15px;font-weight:bold; letter-spacing:5px; text-align: left;line-height: 80px;position:absolute;left:350px;}
+
+
+
+
+	
+
+
+
+
+
+

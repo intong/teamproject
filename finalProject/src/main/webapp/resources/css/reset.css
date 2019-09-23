@@ -1,0 +1,22 @@
+@charset "UTF-8";
+body, div, h1, h2, h3, h4, h5, h6, li, ul, ol{
+	margin: 0;
+	padding: 0;
+	border-spacing: 0px;
+}
+ㄹdiv{
+	vertical-align: middle;
+}
+
+ul, ol, li { 
+	list-style:none; 
+}
+
+a:link{text-decoration:none;color:black;}
+a:visit{text-decoration:none;color:black;}
+a:active{text-decoration:none;color:black;}
+
+button{
+	border: 0;
+	outline: 0;
+}
