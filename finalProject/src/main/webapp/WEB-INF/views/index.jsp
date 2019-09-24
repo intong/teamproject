@@ -20,6 +20,7 @@
 <title>로그인</title>
 </head>
 <body>
+
 	<c:if test="${result != null }">
 		<script type="text/javascript">
 			alert('${result}');
