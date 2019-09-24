@@ -61,7 +61,7 @@
 			<div id="menuDIV">
 				<ul id="menuDIV_ul">
 					<li class="menuDIV_li home"><a href="/fp/">홈으로</a></li>
-					<li class="menuDIV_li"><a href="#">생활패턴보기</a></li>
+					<li class="menuDIV_li"><a href="biorythm.go">생활패턴보기</a></li>
 				</ul>
 			</div>
 			<div id="loginDIV">
