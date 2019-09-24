@@ -10,6 +10,7 @@
 <link rel="stylesheet" href="resources/NWagon/Nwagon.css"
 	type="text/css">
 <script type="text/javascript">
+	alert("바이오리듬 페이지");
 	var params = [ 0, 0, 0, 0 ];
 	var test = [ 8 * 1, 2 * 1, 1 * 1, 2 * 1 ];
 	var jbAry = [
