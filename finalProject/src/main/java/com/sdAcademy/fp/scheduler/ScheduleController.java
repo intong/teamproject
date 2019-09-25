@@ -20,27 +20,29 @@ public class ScheduleController {
 	// 날짜 스케줄 json 만들기 ( 챗봇에 사용)
 	@RequestMapping(value = "/getSchedule.json", method = RequestMethod.GET,produces="application/json; charset=utf-8")
 	public @ResponseBody Schedules getScheduleJSON(Schedule s,HttpServletResponse res) {
-		
 		res.setHeader("Access-Control-Allow-Origin", "*");
-		
 		return sDAO.getScheduleByDate(s);
 	}
 	
 	// 아이디를 통해서 스케줄 json 만들기 (달력 , 스케줄표에 사용 )
 	@RequestMapping(value = "/getSchedulebyId", method = RequestMethod.GET,produces="application/json; charset=utf-8")
 	public @ResponseBody Schedules getSchedulebyId(Schedule s,HttpServletResponse res,HttpServletRequest req) {
-		
 		res.setHeader("Access-Control-Allow-Origin", "*");
-		
 		return sDAO.getScheduleById(s,req);
 	}
+	
+	// 아이디로 스케줄 게시판 출력용 json 만들기
+	@RequestMapping(value = "/getScheduleBoardList", method = RequestMethod.GET,produces="application/json; charset=utf-8")
+	public @ResponseBody Schedules getSchedulebyIdLimit4(Schedule s,HttpServletResponse res,HttpServletRequest req) {
+		res.setHeader("Access-Control-Allow-Origin", "*");
+		return sDAO.getScheduleBoadJSON(s, req);
+	}
+	
 	
 	// 스케줄 등록하기
 	@RequestMapping(value = "/scheduleInsert", method = RequestMethod.GET,produces="application/json; charset=utf-8")
 	public @ResponseBody Schedules scheduleInsert(Schedule s,HttpServletResponse res,HttpServletRequest req) {
-		
 		res.setHeader("Access-Control-Allow-Origin", "*");
-		
 		return sDAO.scheduleInsert(s,req);
 	}
 

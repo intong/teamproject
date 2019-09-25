@@ -89,10 +89,7 @@
                           <div class="row">
                             <div class="col-xs-12">
                                 <label class="col-xs-4" for="edit-part">상대방</label>
-                                 <select class="part_filter" id="part_filter" multiple="multiple" style="width: 64.96666%;">
-                          
-                            
-                        </select>
+                                <select class="part_filter" id="part_filter" multiple="multiple" style="width: 64.96666%;"></select>
                             </div>
                         </div>
                         <div class="row">

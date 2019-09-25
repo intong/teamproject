@@ -10,6 +10,9 @@ public interface ScheduleMapper {
 	// 이름으로 스케줄 리스트 가져오기
 	public abstract List<Schedule> getScheduleById(Schedule s);
 	
+	// 게시판 스케줄 가져오기
+	public abstract List<Schedule> getScheduleListLimit4(Schedule s);
+	
 	// 스케줄 등록 
 	public abstract int scheduleInsert(Schedule s);
 
