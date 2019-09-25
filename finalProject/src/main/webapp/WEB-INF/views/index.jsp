@@ -20,9 +20,6 @@
 <title>로그인</title>
 </head>
 <body>
-<script type="text/javascript">
-	alert('승현아 보아라');
-</script>
 	<c:if test="${result != null }">
 		<script type="text/javascript">
 			alert('${result}');

@@ -11,7 +11,7 @@ public class Schedule {
 	private String s_color;
 	private boolean s_allday;
 	
-	
+	// 파트너 한글 변환용 변수
 	private String koPart;
 	
 	private String m_name;

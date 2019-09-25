@@ -18,14 +18,11 @@ public class ScheduleDAO {
 	
 	// 날짜로 스케줄가져와서 JSON으로 보내줄 schedules 리턴(챗봇에 사용되는 json)
 	public Schedules getScheduleByDate(Schedule s) {
-
 		List<Schedule> schedules = ss.getMapper(ScheduleMapper.class).getScheduleByDate(s);
-
 		Schedules result = new Schedules(schedules);
-
 		return result;
-
 	}
+	
 	
 	// 아이디로 스케줄 가져와서 JSON 으로 보내줄 schedules 리턴 (달력,스케줄표에 사용 되는 json)
 	public Schedules getScheduleById(Schedule s, HttpServletRequest request) {
@@ -103,4 +100,4 @@ public class ScheduleDAO {
 
 	}
 
-}
+} // end of class

@@ -8,7 +8,6 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 	<!--Basic jQuery -->
-	<!-- <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>  -->
 	<script type="text/javascript" src="resources/js/validCheck.js"></script>
 	
 	<!-- customs CSS file -->
@@ -138,32 +137,24 @@
         </div><!-- /.modal -->
 
         <div class="panel panel-default">
-
             <div class="panel-heading">
                 <h3 class="panel-title">필터</h3>
             </div>
-
             <div class="panel-body">
-
                 <div class="col-lg-6">
                     <label for="calendar_view">구분별</label>
                     <div class="input-group">
                         <select class="filter" id="type_filter" multiple="multiple">
                             <option value="할일">할일</option>
                             <option value="스케줄">스케줄</option>
-                            
                         </select>
                     </div>
                 </div>
-
-
-
             </div>
         </div>
         <!-- /.filter panel -->
     </div>
     <!-- /.container -->
-				
 		</div>
 			<!-- 스케줄 게시판 출력 -->
 			<div id="scheduleBoard">
@@ -196,6 +187,5 @@
 			  		</table>
 		  		</div>
 	  		</div>
-	  	</div>
 </body>
 </html>
