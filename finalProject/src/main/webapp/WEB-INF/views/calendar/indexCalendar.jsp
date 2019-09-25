@@ -23,15 +23,10 @@
 <link rel="stylesheet" href="resources/css/reset.css">
 <link rel="stylesheet" href="resources/css/main.css">
 <link rel="stylesheet" href="resources/css/indexCalendar.css">
-<<<<<<< HEAD
-<link rel="stylesheet" href="resources/css/regSchedule.css">
-<link rel="stylesheet" href="resources/css/bioCheck.css">
-<link rel="stylesheet" href="resources/css/bioResult.css">
-<link rel="stylesheet" href="resources/NWagon/Nwagon.css" type="text/css">
-=======
+
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,500,600">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
->>>>>>> branch 'master' of https://github.com/intong/teamproject.git
+
 
 <!-- fullCallendar -->
 	<link rel="stylesheet" href="resources/bootstrap/roboto.css">
@@ -52,10 +47,6 @@
 <title>달력페이지</title>
 </head>
 <body>
-<<<<<<< HEAD
-=======
-	
->>>>>>> branch 'master' of https://github.com/intong/teamproject.git
 	<!-- Header -->
 	<div id="FrameHeader">
 		<div id="ContainerHeader">
