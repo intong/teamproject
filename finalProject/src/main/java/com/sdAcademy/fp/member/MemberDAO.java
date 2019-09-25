@@ -1,5 +1,7 @@
 package com.sdAcademy.fp.member;
 
+import java.util.List;
+
 import javax.servlet.http.HttpServletRequest;
 
 import org.apache.ibatis.session.SqlSession;
@@ -63,6 +65,18 @@ public class MemberDAO {
 	public void logout(HttpServletRequest request) {
 		request.getSession().setAttribute("m", null);
 		loginCheckSession(request);
+	}
+	
+	// 모든 멤버 반환해주는 메서드(달력 셀렉트 옵션 추가 할때 사용 )
+	public Members getAllMember() {
+		
+		List<Member> member = ss.getMapper(MemberMapper.class).getAllMember();
+		
+		Members members = new Members(member);
+		
+		return members;
+		
+		
 	}
 
 	

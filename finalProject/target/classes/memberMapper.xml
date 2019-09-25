@@ -2,9 +2,30 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.sdAcademy.fp.member.MemberMapper">
 	<insert id="join" parameterType="com.sdAcademy.fp.member.Member">
-		insert into youn_finalTest values (#{m_id},#{m_pass},#{m_name},#{m_birth})
+		insert into youn_finalTest
+		values (#{m_id},#{m_pass},#{m_name},#{m_birth})
 	</insert>
-	<select id="getMemberById" parameterType="com.sdAcademy.fp.member.Member" resultType="com.sdAcademy.fp.member.Member">
+	<select id="getMemberById"
+		parameterType="com.sdAcademy.fp.member.Member"
+		resultType="com.sdAcademy.fp.member.Member">
 		select * from youn_finalTest where m_id=#{m_id}
+	</select>
+
+
+
+	<select id="getAllMember" resultType="com.sdAcademy.fp.member.Member">
+
+
+		select * from sep24_member
+
+	</select>
+
+
+	<select id="getMemberNameById"
+		parameterType="com.sdAcademy.fp.scheduler.Schedule"
+		resultType="com.sdAcademy.fp.member.Member">
+
+		select * from sep24_member where m_id =#{s_id}
+
 	</select>
 </mapper>

@@ -7,27 +7,37 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
+<!-- 달력 전용 css -->
+<link rel="stylesheet" href="resources/b_fullCalendar/fullcalendar.min.css">
+	<link rel="stylesheet" href="resources/bootstrap/bootstrap.css">
+	<link rel="stylesheet" href="resources/bootstrap/select2.min.css">
+	<link rel="stylesheet" href="resources/bootstrap/bootstrap-datetimepicker.min.css">
 <!--Basic jQuery -->
 <!-- <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>  -->
-<script src="resources/b_fullCalendar/lib/moment.min.js"></script>
 <script src="resources/b_fullCalendar/lib/jquery.min.js"></script>
-<script type="text/javascript" src="resources/b_fullCalendar/lib/jquery-ui.min.js"></script>
 <script type="text/javascript" src="resources/js/validCheck.js"></script>
 <script type="text/javascript" src="resources/JQ/JQuery.js"></script>
 <script src="resources/NWagon/Nwagon.js"></script>
 
 <!-- customs CSS file -->
 <link rel="stylesheet" href="resources/css/reset.css">
+<link rel="stylesheet" href="resources/css/main.css">
 <link rel="stylesheet" href="resources/css/indexCalendar.css">
+<<<<<<< HEAD
 <link rel="stylesheet" href="resources/css/regSchedule.css">
 <link rel="stylesheet" href="resources/css/bioCheck.css">
 <link rel="stylesheet" href="resources/css/bioResult.css">
 <link rel="stylesheet" href="resources/NWagon/Nwagon.css" type="text/css">
+=======
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,500,600">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+>>>>>>> branch 'master' of https://github.com/intong/teamproject.git
 
 <!-- fullCallendar -->
-<link rel="stylesheet" href="resources/b_fullCalendar/fullcalendar.min.css">
-<link rel="stylesheet" href="resources/b_fullCalendar/fullcalendar.print.min.css">
-<script type="text/javascript" src="resources/b_fullCalendar/fullcalendar.min.js"></script>
+	<link rel="stylesheet" href="resources/bootstrap/roboto.css">
+	<link rel="stylesheet" href="resources/bootstrap/material-icon.css">
+
+	<!-- bootstrap -->
 
 
 <!-- semantic UI -->
@@ -37,9 +47,15 @@
 <!-- customs JS file -->
 <script type="text/javascript" src="resources/js/indexCalendar.js"></script>
 
+
+
 <title>달력페이지</title>
 </head>
 <body>
+<<<<<<< HEAD
+=======
+	
+>>>>>>> branch 'master' of https://github.com/intong/teamproject.git
 	<!-- Header -->
 	<div id="FrameHeader">
 		<div id="ContainerHeader">
@@ -107,5 +123,17 @@
 			<!-- 여기부터 Footer의 내용 작성 공간 -->
 		</div>
 	</div>
+	<!-- 달력전용 js -->
+	<script type="text/javascript" src="resources/bootstrap/bootstrap.js"></script>
+    <script src="resources/b_fullCalendar/lib/moment.min.js"></script>
+	<script type="text/javascript" src="resources/b_fullCalendar/fullcalendar.min.js"></script>
+	<script type="text/javascript" src="resources/bootstrap/ko.js"></script>
+	<script type="text/javascript" src="resources/bootstrap/select2.min.js"></script>
+	<script type="text/javascript" src="resources/bootstrap/bootstrap-datetimepicker.min.js"></script>
+<script type="text/javascript" src="resources/js/editEvent.js"></script>
+<script type="text/javascript" src="resources/js/main.js"></script>
+<script type="text/javascript" src="resources/js/addEvent.js"></script>
+<script type="text/javascript" src="resources/js/etcSetting.js"></script>
+	
 </body>
 </html>

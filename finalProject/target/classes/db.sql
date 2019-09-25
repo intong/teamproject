@@ -32,3 +32,6 @@ create table youn_scheduleTest(
 
 insert into youn_scheduleTest values ();
 
+
+select * from sep16_schedule,sep24_member where (s_id='audidas' or s_part ='audidas') and s_id=m_id
+
