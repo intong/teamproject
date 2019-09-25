@@ -13,11 +13,16 @@
 <script src="resources/b_fullCalendar/lib/jquery.min.js"></script>
 <script type="text/javascript" src="resources/b_fullCalendar/lib/jquery-ui.min.js"></script>
 <script type="text/javascript" src="resources/js/validCheck.js"></script>
+<script type="text/javascript" src="resources/JQ/JQuery.js"></script>
+<script src="resources/NWagon/Nwagon.js"></script>
 
 <!-- customs CSS file -->
 <link rel="stylesheet" href="resources/css/reset.css">
 <link rel="stylesheet" href="resources/css/indexCalendar.css">
 <link rel="stylesheet" href="resources/css/regSchedule.css">
+<link rel="stylesheet" href="resources/css/bioCheck.css">
+<link rel="stylesheet" href="resources/css/bioResult.css">
+<link rel="stylesheet" href="resources/NWagon/Nwagon.css" type="text/css">
 
 <!-- fullCallendar -->
 <link rel="stylesheet" href="resources/b_fullCalendar/fullcalendar.min.css">
@@ -35,11 +40,6 @@
 <title>달력페이지</title>
 </head>
 <body>
-	<script type="text/javascript">
-		$(function(){ 
-			alert('승현아 보아라~~~');
-		});
-	</script>
 	<!-- Header -->
 	<div id="FrameHeader">
 		<div id="ContainerHeader">

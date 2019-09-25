@@ -36,16 +36,11 @@ public class BioController {
 
 	}
 
-	@RequestMapping(value = "/biorythmResult.go", method = RequestMethod.GET)
-	public String goBioR(HttpServletRequest req) {
-		req.setAttribute("includePage", "../rhythm/bioResult.jsp");
-		return "calendar/indexCalendar";
-	}
-
 	// biorythm.update
 	@RequestMapping(value = "/biorythm.update", method = RequestMethod.GET)
-	public String goBioU() {
-		return "rhythm/bioUpdate";
+	public String goBioU(HttpServletRequest req) {
+		req.setAttribute("includePage", "../rhythm/bioUpdate.jsp");
+		return "calendar/indexCalendar";
 	}
 
 	// biorythm.update.json
@@ -59,7 +54,6 @@ public class BioController {
 		if (bDAO.insertCheck(m, req) == 0) {
 			bDAO.insertBioData(req);
 		}
-		System.out.println("헬로2");
 		return bDAO.getBioJSON(m, req);
 	}
 
