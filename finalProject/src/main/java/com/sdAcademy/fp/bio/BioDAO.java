@@ -105,7 +105,6 @@ public class BioDAO {
 		Connection con = null;
 		PreparedStatement pstmt = null;
 		try {
-			System.out.println("헬로");
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			con = DriverManager.getConnection("jdbc:mysql://dee123456.cafe24.com/dee123456?serverTimezone=UTC", "dee123456",
 					"sdedu03teampro");
@@ -114,44 +113,19 @@ public class BioDAO {
 			Member m = (Member) request.getSession().getAttribute("m");
 			String m_id = m.getM_id();
 			String sleep = request.getParameter("sleep");
+			System.out.println(sleep);
 			String exercise = request.getParameter("exercise");
 			String drink = request.getParameter("drink");
 			String fast = request.getParameter("fast");
 
-			String[] sleepar = { "1", "3", "6", "8.1", "10", "12", "13" };
-			String[] exerar = { "1", "2.1", "3", "4", "5", "6" };
-			String[] drinkar = { "1.1", "3", "5", "6" };
-			String[] fastar = { "2.1", "4", "6", "7" };
-
-			for (int i = 1; i < 8; i++) {
-				if (sleep == "i") {
-					sleep = sleepar[i - 1];
-				}
-			}
-			for (int i = 1; i < 7; i++) {
-				if (exercise == "i") {
-					exercise = exerar[i - 1];
-				}
-			}
-			for (int i = 1; i < 5; i++) {
-				if (drink == "i") {
-					drink = drinkar[i - 1];
-				}
-			}
-			for (int i = 1; i < 8; i++) {
-				if (fast == "i") {
-					fast = fastar[i - 1];
-				}
-			}
 			pstmt.setString(1, m_id);
 			pstmt.setString(2, sleep);
 			pstmt.setString(3, exercise);
 			pstmt.setString(4, drink);
 			pstmt.setString(5, fast);
 			pstmt.executeUpdate();
-
+			
 			pstmt.close();
-
 			con.close();
 
 		} catch (Exception e) {
@@ -227,8 +201,6 @@ public class BioDAO {
 		}
 	}
 	*/
-	
-	// 주별
 
 	public Bios getBioJSON(Member m, HttpServletRequest request) {
 		try {

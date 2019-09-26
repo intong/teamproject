@@ -2,35 +2,37 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.sdAcademy.fp.scheduler.ScheduleMapper">
 
-<select id="getScheduleByDate"
-		parameterType="com.sdAcademy.fp.scheduler.Schedule"
-		resultType="com.sdAcademy.fp.scheduler.Schedule">
-
-		select * from sep16_schedule where s_id=#{s_id} and
-		date(s_stime) =
-		#{s_stime}
+	<select id="getScheduleByDate" parameterType="com.sdAcademy.fp.scheduler.Schedule" resultType="com.sdAcademy.fp.scheduler.Schedule">
+		select * 
+		from sep16_schedule 
+		where s_id = #{s_id} and date(s_stime) = #{s_stime}
 	</select>
 
-	<select id="getScheduleById"
-		parameterType="com.sdAcademy.fp.scheduler.Schedule"
-		resultType="com.sdAcademy.fp.scheduler.Schedule">
-
-		
-		select * from sep16_schedule,sep24_member where s_id=#{s_id} and s_id=m_id 
+	<select id="getScheduleById" parameterType="com.sdAcademy.fp.scheduler.Schedule" resultType="com.sdAcademy.fp.scheduler.Schedule">		
+		select * from sep16_schedule,sep24_member where s_id = #{s_id} and s_id = m_id 
 	</select>
-	<insert id="scheduleInsert"
-		parameterType="com.sdAcademy.fp.scheduler.Schedule">
-
+	
+	<insert id="scheduleInsert" parameterType="com.sdAcademy.fp.scheduler.Schedule">
 		insert into sep16_schedule
 		values(0,#{s_id},#{s_content},date_format(#{s_stime},'%Y-%m-%d
 		%H:%i'),date_format(#{s_etime},'%Y-%m-%d
 		%H:%i'),#{s_part},#{s_todocheck},#{s_color},#{s_allday})
-
-
 	</insert>
-
-
-
-
 	
+	<select id="getScheduleListLimit4" parameterType="com.sdAcademy.fp.scheduler.Schedule" resultType="com.sdAcademy.fp.scheduler.Schedule">
+		select * 
+		from sep16_schedule 
+		where s_id=#{s_id} and date(s_stime) in 
+			(
+			select * 
+			from 
+				(
+				select DISTINCT date(s_stime) 
+				from sep16_schedule 
+				where s_id=#{s_id} and date(s_stime) >= date(now()) 
+				order by s_stime limit 4
+				) as dates
+			) 
+		order by s_stime;
+	</select>
 </mapper>
