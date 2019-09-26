@@ -16,7 +16,7 @@
 		insert into sep16_schedule
 		values(0,#{s_id},#{s_content},date_format(#{s_stime},'%Y-%m-%d
 		%H:%i'),date_format(#{s_etime},'%Y-%m-%d
-		%H:%i'),#{s_part},#{s_todocheck},#{s_color},#{s_allday})
+		%H:%i'),#{s_part},#{s_partKor},#{s_todocheck},#{s_color},#{s_allday})
 	</insert>
 	
 	<select id="getScheduleListLimit4" parameterType="com.sdAcademy.fp.scheduler.Schedule" resultType="com.sdAcademy.fp.scheduler.Schedule">
@@ -35,4 +35,10 @@
 			) 
 		order by s_stime;
 	</select>
+	
+	
+	
+	
+	
+	
 </mapper>

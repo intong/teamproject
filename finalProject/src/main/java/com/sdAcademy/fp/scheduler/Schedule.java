@@ -7,12 +7,13 @@ public class Schedule {
 	private String s_stime;
 	private String s_etime;
 	private String s_part;
+	private String s_partKor;
 	private int s_todocheck;
 	private String s_color;
 	private boolean s_allday;
 	
-	// 파트너 한글 변환용 변수
-	private String koPart;
+	
+	
 	
 	private String m_name;
 	
@@ -21,7 +22,7 @@ public class Schedule {
 	}
 
 	public Schedule(int s_no, String s_id, String s_content, String s_stime, String s_etime, String s_part,
-			int s_todocheck, String s_color, boolean s_allday, String koPart, String m_name) {
+			String s_partKor, int s_todocheck, String s_color, boolean s_allday, String m_name) {
 		super();
 		this.s_no = s_no;
 		this.s_id = s_id;
@@ -29,10 +30,10 @@ public class Schedule {
 		this.s_stime = s_stime;
 		this.s_etime = s_etime;
 		this.s_part = s_part;
+		this.s_partKor = s_partKor;
 		this.s_todocheck = s_todocheck;
 		this.s_color = s_color;
 		this.s_allday = s_allday;
-		this.koPart = koPart;
 		this.m_name = m_name;
 	}
 
@@ -84,6 +85,14 @@ public class Schedule {
 		this.s_part = s_part;
 	}
 
+	public String getS_partKor() {
+		return s_partKor;
+	}
+
+	public void setS_partKor(String s_partKor) {
+		this.s_partKor = s_partKor;
+	}
+
 	public int getS_todocheck() {
 		return s_todocheck;
 	}
@@ -108,14 +117,6 @@ public class Schedule {
 		this.s_allday = s_allday;
 	}
 
-	public String getKoPart() {
-		return koPart;
-	}
-
-	public void setKoPart(String koPart) {
-		this.koPart = koPart;
-	}
-
 	public String getM_name() {
 		return m_name;
 	}
@@ -123,6 +124,12 @@ public class Schedule {
 	public void setM_name(String m_name) {
 		this.m_name = m_name;
 	}
+	
+	
+	
+	
+
+	
 	
 	
 	

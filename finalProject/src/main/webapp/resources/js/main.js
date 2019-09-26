@@ -197,10 +197,10 @@ var calendar = $('#calendar').fullCalendar({
     		 
     		  if(s.s_todocheck != 0){
     			  
-    		   array = {_id:s.s_no,title:s.s_content,start:s.s_stime,end:s.s_etime,type :'할일',backgroundColor:s.s_color,allDay:s.s_allday,partner:s.koPart};
+    		   array = {_id:s.s_no,title:s.s_content,start:s.s_stime,end:s.s_etime,type :'할일',backgroundColor:s.s_color,allDay:s.s_allday,partner:s.s_partKor,part:s.s_part};
     		  
     		  }else{
-    			  array = {_id:s.s_no,title:s.s_content,start:s.s_stime,end:s.s_etime,type :'스케줄',backgroundColor:s.s_color,allDay:s.s_allday,partner:s.koPart};
+    			  array = {_id:s.s_no,title:s.s_content,start:s.s_stime,end:s.s_etime,type :'스케줄',backgroundColor:s.s_color,allDay:s.s_allday,partner:s.s_partKor,part:s.s_part};
     			  
     		  }
     		  

@@ -32,7 +32,7 @@ $(function() {
 
 			$.each(res.member, function(i, m) {
 				var option = $("<option></option>").attr('value', m.m_id).text(
-						m.m_name);
+						m.m_name+" ");
 				$("#part_filter").prepend(option);
 
 			});

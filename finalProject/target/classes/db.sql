@@ -35,3 +35,16 @@ insert into youn_scheduleTest values ();
 
 select * from sep16_schedule,sep24_member where (s_id='audidas' or s_part ='audidas') and s_id=m_id
 
+select * from sep16_schedule
+
+alter table sep16_schedule add s_partKor varchar(2000);
+
+alter table sep16_schedule change spart s_part varchar(2000) not null
+
+alter table sep16_schedule modify column s_partKor varchar(2000) not null after s_part
+
+truncate sep16_schedule
+
+update sep16_schedule set s_partKor='이재호,박종훈,최승현',s_part='qwe,kim,audidas' where s_no=1
+
+update sep16_schedule set s_partKor='이재호' where s_no=2

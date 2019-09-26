@@ -43,10 +43,38 @@ var newEvent = function(start, end, eventType) {
 					if(i+1==editPart.val().length){
 						part +=editPart.val()[i];
 					}else{
-						part +=editPart.val()[i]+" ";	
+						part +=editPart.val()[i]+",";	
 					}
 					
 				}
+				
+				var partName= $("#part_filter option:selected").text();
+				var partNames = partName.split(" ");
+				
+				if(partNames[partNames.length-1]==""){
+					partNames.pop();
+				}
+				
+				
+				var names = "";
+				alert(partNames.length);
+				for (var i = 0; i < partNames.length; i++) {
+					if(i+1==partNames.length){
+						names +=partNames[i];
+					}else{
+						names +=partNames[i]+",";	
+					}
+					
+				}
+				var resultType;
+				if(editType.val()=='할일'){
+					resultType=0;
+				}else{
+					resultType=1;
+					
+				}
+				
+				
 
 				var eventData = {
 					_id : eventId,
@@ -55,7 +83,8 @@ var newEvent = function(start, end, eventType) {
 					end : editEnd.val(),
 					type : editType.val(),
 					username :user.text() ,
-					partner :part,
+					parts : part,
+					partner :names,
 					backgroundColor : editColor.val(),
 					textColor : '#ffffff',
 					allDay : false
@@ -100,8 +129,9 @@ var newEvent = function(start, end, eventType) {
 					s_content : eventData.title,
 					s_stime : eventData.start,
 					s_etime : eventData.end,
-					type : eventData.type,
-					partner :eventData.partner,
+					s_part :part,
+					s_partKor:names,
+					s_todocheck : resultType,
 					s_allday : eventData.allDay,
 					s_color :eventData.backgroundColor
 					
