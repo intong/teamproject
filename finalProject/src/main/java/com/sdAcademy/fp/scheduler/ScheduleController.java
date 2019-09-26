@@ -32,7 +32,7 @@ public class ScheduleController {
 	}
 	
 	// 아이디로 스케줄 게시판 출력용 json 만들기
-	@RequestMapping(value = "/getScheduleBoardList", method = RequestMethod.GET,produces="application/json; charset=utf-8")
+	@RequestMapping(value = "/getScheduleBoardListLimit4", method = RequestMethod.GET,produces="application/json; charset=utf-8")
 	public @ResponseBody Schedules getSchedulebyIdLimit4(Schedule s,HttpServletResponse res,HttpServletRequest req) {
 		res.setHeader("Access-Control-Allow-Origin", "*");
 		return sDAO.getScheduleBoadJSON(s, req);

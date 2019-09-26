@@ -156,7 +156,11 @@
 		</div>
 			<!-- 스케줄 게시판 출력 -->
 			<div id="scheduleBoard">
-				<div id="scheduleBoardFrame">	  			
+				<div id="scheduleBoardFrame">	  
+				
+				
+				
+					<!-- 		
 			  		<table class="ui collapsing table boardFrame">
 			  			<thead class="boardHeader">
 			  				<tr>
@@ -183,6 +187,10 @@
 			  				</tr>
 			  			</tbody>
 			  		</table>
+			  		 -->
+			  		
+			  		
+			  		
 		  		</div>
 	  		</div>
 </body>

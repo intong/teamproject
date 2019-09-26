@@ -83,7 +83,7 @@ public class ScheduleDAO {
 	
 	// 스케줄 게시판 출력용 JSON 메서드
 	public Schedules getScheduleBoadJSON(Schedule s, HttpServletRequest request) {
-		
+		s.setS_id(request.getParameter("s_id"));
 		List<Schedule> schedules = ss.getMapper(ScheduleMapper.class).getScheduleListLimit4(s);
 		Schedules result = new Schedules(schedules);
 		return result;
