@@ -26,6 +26,8 @@
 <link rel="stylesheet" href="resources/css/indexCalendar.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,500,600">
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="resources/css/bioCheck.css">
+<link rel="stylesheet" href="resources/NWagon/Nwagon.css" type="text/css">
 
 <!-- fullCallendar -->
 <link rel="stylesheet" href="resources/bootstrap/roboto.css">
