@@ -243,7 +243,7 @@ public class BioDAO {
 	// FlaskWas를 통한 딥러닝 AI 결과 도출
 	public void getBiorythm(Bio b, HttpServletRequest request) {
 		try {
-			String s = String.format("http://localhost:9999/biorythm.get?sleep=%f&exercise=%f&drink=%f&fast=%f",
+			String s = String.format("http://192.168.0.71:9999/biorythm.get?sleep=%f&exercise=%f&drink=%f&fast=%f",
 					b.getW_sleep(), b.getW_exer(), b.getW_drink(), b.getW_fast());
 			URL u = new URL(s);
 			HttpURLConnection huc = (HttpURLConnection) u.openConnection();
