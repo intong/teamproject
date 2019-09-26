@@ -1,9 +1,12 @@
 @charset "UTF-8";
+
 #state{
 	/*background-color: darkgray;*/
-	width:1000px;
-	height:50px;
+	font-family: "test";
+	width:340px;
+	height:70px;
 	font-size: 25px;
+	border-bottom: 5px double #E65100;
 }
 
 .vdimg a img{
@@ -19,18 +22,37 @@
 	border: 2px solid black;
 }
 
-/*햄버거 사진, 술 사진*/
+/* 술 사진*/
 .imgTD2 {
+	border: 2px solid #283593;
 	width: 226px;
 	height: 200px;
+	transition: all 1s ease .1s;
 }
-/*
-#t3 {
-	border-spacing: 0;
+
+/* 햄버거 사진*/
+.imgTD3 {
+	border: 2px solid #283593;
+	width: 226px;
+	height: 200px;
+	transition: all 1s ease .1s;
+}
+
+/* 술 사진*/
+.imgTD2:hover{
+	width: 800px;
+	height: 500px;
+}
+
+/* 햄버거 사진*/
+.imgTD3:hover{
 	width: 500px;
-}*/
+	height: 700px;
+}
+
 
 marquee{
+	color:#1A237E;
 	direction: left;
 }
 .svtitle0,.svtitle1,.svtitle2,.svtitle3,.svtitle4,.evtitle0,.evtitle1,.evtitle2,.evtitle3,.evtitle4{
@@ -48,12 +70,13 @@ marquee{
 }
 
 .advise {
-	/*background: yellow;*/
+	/*background-color: #9FA8DA;*/
 	position: relative;
 	top: 400px;
 	width: 1000px;
 	height: 800px;
 }
+
 .div0{
 	position: absolute;
 	top:0px;
@@ -76,7 +99,7 @@ marquee{
 	left:500px;
 	width:250px;
 	height:700px;
-	/*background-color: green;*/
+	z-index:1;
 }
 .div3{
 	position: absolute;
@@ -84,16 +107,9 @@ marquee{
 	left:750px;
 	width:250px;
 	height:700px;
-	/*background-color: skyblue;*/
+	z-index:0;
 }
-/*
-.tab1, .tab2, .tab3, .tab0 {
-	position: relative;
-	top: -400px;
-	width: 200px;
-	float: left;
-	margin-left: 30px;
-}*/
+
 
 .tab0 {
 	position:absolute;
@@ -150,6 +166,7 @@ marquee{
 	font-weight: bold;
 	font-size:30px;
 	height:50px;
+	color:#00695C;
 }
 
 span{
@@ -199,24 +216,6 @@ span{
 	z-index: 9999;
 }
 
-.scale {
-	transform: scale(1);
-	transition: all 0.5s ease-in-out;
-}
-
-.scale :hover {
-	transform: scale(4);
-}
-
-.scale2 {
-	transform: scale(1);
-	transition: all 0.5s ease-in-out;
-}
-
-.scale2 :hover {
-	transform: scale(4);
-}
-
 #reviseDiv{
 	position:relative;
 	width:500px;
@@ -226,5 +225,13 @@ span{
 }
 
 #reviseDiv button{
-	background-color: darkgray;
+	border-radius:20px;
+	background-color: #F8BBD0;
+	color:#880E4F;
+}
+
+#reviseDiv button:hover{
+	border-radius:20px;
+	background-color: #880E4F;
+	color:#F8BBD0;
 }
