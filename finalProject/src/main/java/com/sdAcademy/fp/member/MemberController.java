@@ -57,9 +57,7 @@ public class MemberController {
 	// 멤버들 JSON 으로 보내주기
 	@RequestMapping(value = "/getAllMember.json", method = RequestMethod.GET, produces = "application/json; charset=utf-8")
 	public @ResponseBody Members getAllMemberJSON(HttpServletResponse res) {
-
 		res.setHeader("Access-Control-Allow-Origin", "*");
-
 		return mDAO.getAllMember();
 	}
 

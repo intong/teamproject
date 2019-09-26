@@ -110,7 +110,6 @@ var newEvent = function(start, end, eventType) {
 							.format('YYYY-MM-DD');
 					// DB에 넣을때(선택)
 					realEndDay = moment(eventData.end).format('YYYY-MM-DD');
-
 					eventData.allDay = true;
 				}
 
@@ -122,7 +121,7 @@ var newEvent = function(start, end, eventType) {
 				// 새로운 일정 저장
 				$.ajax({
 					type : "get",
-					url : "http://localhost/fp/scheduleInsert",
+					url : "scheduleInsert",
 					data : {
 						
 					s_id :eventData.username,
@@ -137,7 +136,6 @@ var newEvent = function(start, end, eventType) {
 					
 					},
 					success : function(response) {
-						alert("1");
 						// DB연동시 중복이벤트 방지를 위한
 						// $('#calendar').fullCalendar('removeEvents');
 						// $('#calendar').fullCalendar('refetchEvents');

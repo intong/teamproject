@@ -27,7 +27,7 @@ $(function() {
 
 	$.ajax({
 		type : "get",
-		url : "http://localhost/fp/getAllMember.json",
+		url : "getAllMember.json",
 		success : function(res) {
 
 			$.each(res.member, function(i, m) {

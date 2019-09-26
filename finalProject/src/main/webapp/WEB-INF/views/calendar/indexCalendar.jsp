@@ -106,6 +106,7 @@
 	<div id="FrameFooter">
 		<div id="ContainerFooter">
 			<!-- 여기부터 Footer의 내용 작성 공간 -->
+			
 		</div>
 	</div>
 	

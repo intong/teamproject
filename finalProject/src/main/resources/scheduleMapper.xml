@@ -9,7 +9,7 @@
 	</select>
 
 	<select id="getScheduleById" parameterType="com.sdAcademy.fp.scheduler.Schedule" resultType="com.sdAcademy.fp.scheduler.Schedule">		
-		select * from sep16_schedule,sep24_member where s_id = #{s_id} and s_id = m_id 
+		select * from sep16_schedule,sep16_member where s_id = #{s_id} and s_id = m_id 
 	</select>
 	
 	<insert id="scheduleInsert" parameterType="com.sdAcademy.fp.scheduler.Schedule">

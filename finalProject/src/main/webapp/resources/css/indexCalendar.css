@@ -13,12 +13,12 @@
 
 	/* layout Frame Design */
 #FrameHeader{width:100%; height: 300px;}
-#FrameContent{width:100%; height: 1100px;}
+#FrameContent{width:100%; height: 100%;}
 #FrameFooter{width:100%; height: 100px;}
 
 	/* layout Container(내용 들어갈 자리) */
 #ContainerHeader{width:1000px;height: 300px; margin: 0 auto;position:relative;}
-#ContainerContent{width:1000px;height: 1100px; margin: 0 auto;}
+#ContainerContent{width:1000px;height: 100%; margin: 0 auto;}
 #ContainerFooter{width:1000px;height: 100px;margin: 0 auto;}
 
 	/* Header Design */

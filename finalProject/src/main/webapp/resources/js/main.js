@@ -170,7 +170,7 @@ var calendar = $('#calendar').fullCalendar({
   function (start, end, timezone,callback) {
     $.ajax({
       type: "get",
-      url: "http://localhost/fp/getSchedulebyId",
+      url: "getSchedulebyId",
       data: {
        s_id:userId
       },

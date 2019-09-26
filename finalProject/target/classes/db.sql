@@ -7,7 +7,7 @@ select * from youn_test
 
 show databases;
 use dee123456
-create table youn_finalTest (
+create table sep16_member (
 	m_id	varchar (45) primary key,
 	m_pass	varchar (100) not null,
 	m_name	varchar (45) not null,
@@ -31,6 +31,8 @@ create table youn_scheduleTest(
 
 
 insert into youn_scheduleTest values ();
+
+select * from sep24_member
 
 
 select * from sep16_schedule,sep24_member where (s_id='audidas' or s_part ='audidas') and s_id=m_id

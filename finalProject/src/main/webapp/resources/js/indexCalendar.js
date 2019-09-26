@@ -1,14 +1,4 @@
-
-// 일정 시간(10분) 마다 로그인 여부 체크하기
-function checkMomentLogin(){
-	setInterval(function(){
-		var m_id = $('#memberID').text();
-		if (m_id == "") {
-			location.href = "logout";
-		}
-	}, 30000);
-}
-
+var sec = 0;
 
 // 로그아웃하러 가기
 function logoutGo(){
@@ -153,13 +143,7 @@ function getCalendar(){
 	        }
 	      ]
 	    });
-
 }
-
-
-
-
-
 
 $(function(){
 	logoutGo();
@@ -167,6 +151,4 @@ $(function(){
 	getToday();
 	getWeather();
 	getCalendar();
-	checkMomentLogin();
-	//$( "#draggable" ).draggable(); -> 드래그 가능하게 하는 기능
 });
