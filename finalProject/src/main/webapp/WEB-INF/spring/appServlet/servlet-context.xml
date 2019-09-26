@@ -28,7 +28,7 @@
 	<beans:bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource">
 		<beans:property name="driverClassName" value="com.mysql.cj.jdbc.Driver" />
 		<beans:property name="url"
-			value="jdbc:mysql://dee123456.cafe24.com/dee123456?serverTimezone=UTC" />
+			value="jdbc:mysql://dee123456.cafe24.com/dee123456?serverTimezone=Asia/Seoul" />
 		<beans:property name="username" value="dee123456" />
 		<beans:property name="password" value="sdedu03teampro" />
 	</beans:bean>
