@@ -106,7 +106,7 @@ public class BioDAO {
 		PreparedStatement pstmt = null;
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			con = DriverManager.getConnection("jdbc:mysql://dee123456.cafe24.com/dee123456?serverTimezone=UTC", "dee123456",
+			con = DriverManager.getConnection("jdbc:mysql://dee123456.cafe24.com/dee123456?serverTimezone=Asia/Seoul", "dee123456",
 					"sdedu03teampro");
 			String query = "insert into sep06_weekJ values(NULL,NOW(),?,?,?,?,?)";
 			pstmt = con.prepareStatement(query);
@@ -140,7 +140,7 @@ public class BioDAO {
 		PreparedStatement pstmt = null;
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			con = DriverManager.getConnection("jdbc:mysql://dee123456.cafe24.com/dee123456?serverTimezone=UTC", "dee123456",
+			con = DriverManager.getConnection("jdbc:mysql://dee123456.cafe24.com/dee123456?serverTimezone=Asia/Seoul", "dee123456",
 					"sdedu03teampro");
 			String query = "update sep06_weekJ set w_sleep=?,w_exer=?,w_drink=?,w_fast=? where year(w_date)=year(now()) and week(w_date)=week(now())";
 

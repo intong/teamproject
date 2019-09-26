@@ -1,0 +1,230 @@
+@charset "UTF-8";
+#state{
+	/*background-color: darkgray;*/
+	width:1000px;
+	height:50px;
+	font-size: 25px;
+}
+
+.vdimg a img{
+	width:226px;
+	height:140px;
+	border: 2px solid black;
+}
+
+/*상품 사진*/
+.imgTD {
+	width:226px;
+	height: 140px;
+	border: 2px solid black;
+}
+
+/*햄버거 사진, 술 사진*/
+.imgTD2 {
+	width: 226px;
+	height: 200px;
+}
+/*
+#t3 {
+	border-spacing: 0;
+	width: 500px;
+}*/
+
+marquee{
+	direction: left;
+}
+.svtitle0,.svtitle1,.svtitle2,.svtitle3,.svtitle4,.evtitle0,.evtitle1,.evtitle2,.evtitle3,.evtitle4{
+	width:230px;
+}
+
+.vdtitle {
+	width:230px;
+	border-bottom: 1px solid blue;
+}
+
+.vdimg {
+	border-bottom: 1px solid blue;
+	padding-top: 5px;
+}
+
+.advise {
+	/*background: yellow;*/
+	position: relative;
+	top: 400px;
+	width: 1000px;
+	height: 800px;
+}
+.div0{
+	position: absolute;
+	top:0px;
+	left:0px;
+	width:250px;
+	height:700px;
+	/*background-color: red;*/
+}
+.div1{
+	position: absolute;
+	top:0px;
+	left:250px;
+	width:250px;
+	height:700px;
+	/*ackground-color: orange;*/
+}
+.div2{
+	position: absolute;
+	top:0px;
+	left:500px;
+	width:250px;
+	height:700px;
+	/*background-color: green;*/
+}
+.div3{
+	position: absolute;
+	top:0px;
+	left:750px;
+	width:250px;
+	height:700px;
+	/*background-color: skyblue;*/
+}
+/*
+.tab1, .tab2, .tab3, .tab0 {
+	position: relative;
+	top: -400px;
+	width: 200px;
+	float: left;
+	margin-left: 30px;
+}*/
+
+.tab0 {
+	position:absolute;
+	top:0px;
+	left:10px;
+	width:230px;
+	/*background-color: orange;*/
+}
+.tab1 {
+	position:absolute;
+	top:0px;
+	left:10px;
+	width:230px;
+	/*background-color: green;*/
+}
+.tab2 {
+	position:absolute;
+	top:0px;
+	left:10px;
+	width:230px;
+	/*background-color: skyblue;*/
+}
+
+.tab3 {
+	position:absolute;
+	top:0px;
+	left:10px;
+	width:230px;
+	/*background-color: red;*/
+}
+
+#chart1 {
+	float: left; 
+	/*background-color: orange;*/
+	width: 500px;
+	height: 400px;
+}
+
+#chart2 {
+	float:right;
+	width: 500px;
+	height: 400px; 
+	/*ackground-color: lightgreen;*/
+}
+
+#vtitle {
+	border: none;
+	background: transparent;
+	width: 200px;
+}
+
+/*테이블 제목*/
+.tdn {
+	font-weight: bold;
+	font-size:30px;
+	height:50px;
+}
+
+span{
+	width:200px;
+	font-size:15px;
+}
+/*소제목*/
+.alert{
+	font-weight: bold;
+	color:red;
+	font-size: 20px;
+}
+
+.pieT {
+	border-bottom: 1px solid blue;
+	border-top: 1px solid blue;
+	padding-bottom: 5px;
+}
+
+/* 마우스 툴팁 :마우스 올리면 설명 뜨게 하기 */
+[data-tooltip-text]:hover {
+	position: relative;
+}
+
+[data-tooltip-text]:hover:after {
+	background-color: #000000;
+	background-color: rgba(0, 0, 0, 0.8);
+	-webkit-box-shadow: 0px 0px 3px 1px rgba(50, 50, 50, 0.4);
+	-moz-box-shadow: 0px 0px 3px 1px rgba(50, 50, 50, 0.4);
+	box-shadow: 0px 0px 3px 1px rgba(50, 50, 50, 0.4);
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	color: #FFFFFF;
+	font-size: 12px;
+	content: attr(data-tooltip-text);
+	margin-bottom: 10px;
+	top: 130%;
+	left: 0;
+	padding: 7px 12px;
+	position: absolute;
+	width: auto;
+	min-width: 200px;
+	max-width: 400px;
+	word-wrap: break-word;
+	word-break: keep-all;
+	z-index: 9999;
+}
+
+.scale {
+	transform: scale(1);
+	transition: all 0.5s ease-in-out;
+}
+
+.scale :hover {
+	transform: scale(4);
+}
+
+.scale2 {
+	transform: scale(1);
+	transition: all 0.5s ease-in-out;
+}
+
+.scale2 :hover {
+	transform: scale(4);
+}
+
+#reviseDiv{
+	position:relative;
+	width:500px;
+	top:-20px;
+	left:700px;
+	font-size: 25px;	
+}
+
+#reviseDiv button{
+	background-color: darkgray;
+}
