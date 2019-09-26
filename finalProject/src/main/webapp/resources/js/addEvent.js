@@ -138,6 +138,32 @@ var newEvent = function(start, end, eventType) {
                
                },
                success : function(response) {
+            	   $('#scheduleBoardFrame').empty();
+            	   
+            	   $.each(response.schedule, function(i,v) {
+            		var day = v.s_stime.substring(0,10);
+       				var time = v.s_stime.substring(10,16);
+       				var content = v.s_content;
+       				var partID = v.s_part;
+       				var partKor = v.s_partKor;
+       				var no = v.s_no;
+       				
+       				var th = $('<th></th>').attr("colspan","4").text(day);
+       				var tr_th = $('<tr></tr>').append(th);
+       				var thead = $('<thead></thead>').attr("class","boardHeader").append(tr_th);
+       				var td1 = $('<td></td>').attr("class","boardContent bcTime").text(time);
+       				var td2 = $('<td></td>').attr("class","boardContent bcContent").text(content);
+       				var span1 = $('<span></span>').text(partKor);
+       				var icon = $('<i></i>').attr('class','comments outline large icon').attr("onclick","jeonjakua("+no+','+"'"+partKor+"'"+");");
+       				//var span2 = $('<span></span>').attr("class","chat").attr("onclick","jeonjakua("+no+','+"'"+partKor+"'"+");").text("채팅");
+       				var td3 = $('<td></td>').attr("class","boardContent bcPartner").append(span1);
+       				var td4 = $('<td></td>').attr("class","boardContent bcPartner").append(icon);
+       				var tr_td = $('<tr></tr>').append(td1,td2,td3,td4);
+       				var tbody = $('<tbody></tbody>').append(tr_td);
+       				var table = $('<table></table>').attr("class","ui collapsing table boardFrame").css("margin-bottom","20px").append(thead,tbody);
+       				$('#scheduleBoardFrame').append(table);
+					
+				})
                   
                   
                    $('#calendar').fullCalendar('removeEvents');

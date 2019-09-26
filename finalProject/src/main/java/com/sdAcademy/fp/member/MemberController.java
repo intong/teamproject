@@ -22,7 +22,7 @@ public class MemberController {
 	public void loginDo(HttpServletResponse response, HttpServletRequest request, Member inputMember) {
 		mDAO.login(request, inputMember);
 		try {
-			response.sendRedirect("/fp/");
+			response.sendRedirect("/");
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -36,11 +36,15 @@ public class MemberController {
 
 	// 회원가입하기
 	@RequestMapping(value = "/join", method = RequestMethod.POST)
-	public String goInsertMember(HttpServletRequest request, Member m) {
+	public void goInsertMember(HttpServletRequest request, Member m, HttpServletResponse response) {
 		mDAO.joinMember(request, m);
 		mDAO.login(request, m);
-		request.setAttribute("includePage", "scheduleIncludePage.jsp");
-		return "calendar/indexCalendar";
+		try {
+			response.sendRedirect("/");
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 	// logout 하기
@@ -48,7 +52,7 @@ public class MemberController {
 	public void logout(HttpServletRequest request, HttpServletResponse response) {
 		mDAO.logout(request);
 		try {
-			response.sendRedirect("/fp/");
+			response.sendRedirect("/");
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

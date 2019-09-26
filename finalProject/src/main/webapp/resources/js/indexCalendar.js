@@ -13,7 +13,7 @@ function logoutGo(){
 // 홈버튼
 function goHome(){
 	$('#logoDIV').click(function(){
-		location.href = "/fp/";
+		location.href = "/";
 	});
 }
 

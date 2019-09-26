@@ -75,8 +75,9 @@ public class ScheduleDAO {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		List<Schedule> schedules = ss.getMapper(ScheduleMapper.class).getScheduleById(s);
+		List<Schedule> schedules = ss.getMapper(ScheduleMapper.class).getScheduleListLimit4(s);
 		Schedules result = new Schedules(schedules);
+		
 		return result;
 	}
 	
