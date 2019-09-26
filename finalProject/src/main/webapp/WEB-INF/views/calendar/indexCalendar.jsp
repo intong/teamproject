@@ -37,6 +37,9 @@
 <link rel="stylesheet" type="text/css" href="resources/a_semanticUI/semantic.min.css">
 <script src="resources/a_semanticUI/semantic.min.js"></script>
 
+
+
+
 <!-- customs JS file -->
 <script type="text/javascript" src="resources/js/indexCalendar.js"></script>
 

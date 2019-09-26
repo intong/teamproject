@@ -420,8 +420,7 @@ $(function() {
 							var tr = $("<tr></tr>").append(td);
 
 							var img = $("<img>").attr('src',
-									'resources/IMG/drink.jpg').attr('id',
-									'drink').attr('class', 'imgTD2');
+									'resources/IMG/drink.jpg').attr('class', 'imgTD2');
 
 							var div = $("<div></div>").attr('class', 'scale');
 							div.append(img);
@@ -488,7 +487,7 @@ $(function() {
 							// test용
 							var img = $("<img>").attr('src',
 									'resources/IMG/burger.jpg').attr('class',
-									'imgTD2');
+									'imgTD3');
 
 							// hover용
 							var div = $("<div></div>").attr('class', 'scale2');
