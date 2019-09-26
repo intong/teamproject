@@ -31,9 +31,12 @@ $(function() {
 		success : function(res) {
 
 			$.each(res.member, function(i, m) {
+				if(userId!=m.m_id){
+					
 				var option = $("<option></option>").attr('value', m.m_id).text(
 						m.m_name+" ");
 				$("#part_filter").prepend(option);
+				}
 
 			});
 		}

@@ -160,13 +160,7 @@ var calendar = $('#calendar').fullCalendar({
   /* ****************
    *  일정 받아옴 
    * ************** */
-  events: /*[{
-	  
-	 _id : 5,
-	 title : '잠자기',
-	 start : "2019-09-27T19:30"
-	  
-  }]*/
+  events: 
   function (start, end, timezone,callback) {
     $.ajax({
       type: "get",
@@ -175,18 +169,7 @@ var calendar = $('#calendar').fullCalendar({
        s_id:userId
       },
       success: function (response) {
-    	 /* var fixedDate = response.schedule.map(function(array,result) {
-    		  if(array.s_etime!= null){
-    			  
-    			  result = {_id:array.s_no,title:array.s_content,start:array.s_stime,partner : array.s_part}
-    		  }else{
-    			  
-    			  result = {_id:array.s_no,title:array.s_content,start:array.s_stime,end:array.s_etime,partner : array.s_part}
-    		  }
-    		  
-    		 
-			return result;
-		});*/
+    	
     	  
     	  
     	   var resultArray = [];
@@ -209,8 +192,7 @@ var calendar = $('#calendar').fullCalendar({
 		});
     	  callback(resultArray);
        
-    	/*  return  resultArray; 
-    	  callback(resultArray);*/
+    
       }
     });
   },
@@ -316,6 +298,8 @@ var calendar = $('#calendar').fullCalendar({
     //날짜 클릭시 카테고리 선택메뉴
     var $contextMenu = $("#contextMenu");
     $contextMenu.on("click", "a", function (e) {
+    	editTitle.val("");
+    	$(".select2-selection__rendered").empty();
       e.preventDefault();
 
       //닫기 버튼이 아닐때

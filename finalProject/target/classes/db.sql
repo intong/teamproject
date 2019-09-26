@@ -50,3 +50,7 @@ truncate sep16_schedule
 update sep16_schedule set s_partKor='이재호,박종훈,최승현',s_part='qwe,kim,audidas' where s_no=1
 
 update sep16_schedule set s_partKor='이재호' where s_no=2
+
+show tables
+
+select * from sep16_member

@@ -21,12 +21,18 @@ var editEvent = function (event, element, view) {
     } else {
         editEnd.val(event.end.format('YYYY-MM-DD HH:mm'));
     }
-
+    var ids = [];
+    var parts = event.part.split(",");
+    
+    ids[0]=parts;
+   
     modalTitle.html('일정 수정');
     editTitle.val(event.title);
     editStart.val(event.start.format('YYYY-MM-DD HH:mm'));
     editType.val(event.type);
-    editPart.val(event.part);
+    $("#part_filter").select2('val',ids);
+   
+    
     editColor.val(event.backgroundColor).css('color', event.backgroundColor);
 
     addBtnContainer.hide();
@@ -51,6 +57,7 @@ var editEvent = function (event, element, view) {
         var startDate;
         var endDate;
         var displayDate;
+        
 
         if (editAllDay.is(':checked')) {
             statusAllDay = true;
@@ -72,7 +79,44 @@ var editEvent = function (event, element, view) {
         event.end = displayDate;
         event.type = editType.val();
         event.backgroundColor = editColor.val();
-        event.description = editDesc.val();
+        
+        var resultType;
+      if(event.type=='할일'){
+         resultType=0;
+      }else{
+         resultType=1;
+         
+      }
+      var partId = $("##part_filter").val();
+      var part = "";
+      for (var i = 0; i <partId.length; i++) {
+         if(i+1==partId.length){
+            part +=partId[i];
+         }else{
+            part +=partId[i]+",";   
+         }
+         
+      }
+      
+      var partName= $("#part_filter option:selected").text();
+      var partNames = partName.split(" ");
+      
+      if(partNames[partNames.length-1]==""){
+         partNames.pop();
+      }
+      
+      
+      var names = "";
+      
+      for (var i = 0; i < partNames.length; i++) {
+         if(i+1==partNames.length){
+            names +=partNames[i];
+         }else{
+            names +=partNames[i]+",";   
+         }
+         
+      }
+        
 
         $("#calendar").fullCalendar('updateEvent', event);
 
@@ -81,7 +125,15 @@ var editEvent = function (event, element, view) {
             type: "get",
             url: "",
             data: {
-                //...
+                s_no: event._id,
+                s_content : event.title,
+                s_stime : event.start,
+                s_etime : event.end,
+                s_part :part,
+                s_partKor : names,
+                s_todocheck : resultType,
+                s_allday: event.allDay,
+                s_color :backgroundColor
             },
             success: function (response) {
                 alert('수정되었습니다.')
@@ -101,7 +153,7 @@ var editEvent = function (event, element, view) {
             type: "get",
             url: "",
             data: {
-                //...
+                s_no: event._id
             },
             success: function (response) {
                 alert('삭제되었습니다.');
