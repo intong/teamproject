@@ -54,3 +54,6 @@ update sep16_schedule set s_partKor='이재호' where s_no=2
 show tables
 
 select * from sep16_member
+
+
+delete from sep16_schedule where s_no =4;

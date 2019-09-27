@@ -45,8 +45,28 @@ public class ScheduleController {
 		res.setHeader("Access-Control-Allow-Origin", "*");
 		return sDAO.scheduleInsert(s,req);
 	}
-
 	
+	// 스케줄날짜만 업데이트
+
+	@RequestMapping(value = "/scheduleUpdateDate", method = RequestMethod.GET,produces="application/json; charset=utf-8")
+	public @ResponseBody Schedules scheduleUpdateDate(Schedule s,HttpServletResponse res,HttpServletRequest req) {
+		res.setHeader("Access-Control-Allow-Origin", "*");
+		return sDAO.scheduleUpdateDate(s);
+	}
+	
+	// 스케줄 삭제
+	@RequestMapping(value = "/scheduleDeleteByNo", method = RequestMethod.GET,produces="application/json; charset=utf-8")
+	public @ResponseBody Schedules scheduleDeleteByNo(Schedule s,HttpServletResponse res,HttpServletRequest req) {
+		res.setHeader("Access-Control-Allow-Origin", "*");
+		return sDAO.scheduleDelete(s);
+	}
+	
+	// 스케줄 전부 업데이트
+	@RequestMapping(value = "/scheduleUpdateAll", method = RequestMethod.GET,produces="application/json; charset=utf-8")
+	public @ResponseBody Schedules scheduleUpdateAll(Schedule s,HttpServletResponse res,HttpServletRequest req) {
+		res.setHeader("Access-Control-Allow-Origin", "*");
+		return sDAO.scheduleUpdateAll(s);
+	}
 
 	
 	

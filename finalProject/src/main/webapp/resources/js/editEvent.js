@@ -87,7 +87,7 @@ var editEvent = function (event, element, view) {
          resultType=1;
          
       }
-      var partId = $("##part_filter").val();
+      var partId = $("#part_filter").val();
       var part = "";
       for (var i = 0; i <partId.length; i++) {
          if(i+1==partId.length){
@@ -123,9 +123,10 @@ var editEvent = function (event, element, view) {
         //일정 업데이트
         $.ajax({
             type: "get",
-            url: "",
+            url: "scheduleUpdateAll",
             data: {
                 s_no: event._id,
+                s_id:userId,
                 s_content : event.title,
                 s_stime : event.start,
                 s_etime : event.end,
@@ -133,30 +134,34 @@ var editEvent = function (event, element, view) {
                 s_partKor : names,
                 s_todocheck : resultType,
                 s_allday: event.allDay,
-                s_color :backgroundColor
+                s_color :event.backgroundColor
             },
             success: function (response) {
-                alert('수정되었습니다.')
+            	$('#scheduleBoardFrame').empty();
+            	ScheduleForLimit4(response);
             }
         });
 
     });
 
     // 삭제버튼
+    $('#deleteEvent').unbind();
     $('#deleteEvent').on('click', function () {
-        $('#deleteEvent').unbind();
         $("#calendar").fullCalendar('removeEvents', [event._id]);
         eventModal.modal('hide');
 
         //삭제시
         $.ajax({
             type: "get",
-            url: "",
+            url: "scheduleDeleteByNo",
             data: {
-                s_no: event._id
+                s_no: event._id,
+                s_id:userId
             },
             success: function (response) {
-                alert('삭제되었습니다.');
+            	alert('삭제되었습니다.');
+            	$('#scheduleBoardFrame').empty();
+            	ScheduleForLimit4(response);
             }
         });
     });

@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.sdAcademy.fp.scheduler.ScheduleMapper">
-
+	
+	<!-- 일자에 맞는 스케줄 데이터 가져오기 -->
 	<select id="getScheduleByDate" parameterType="com.sdAcademy.fp.scheduler.Schedule" resultType="com.sdAcademy.fp.scheduler.Schedule">
 		select * 
 		from sep16_schedule 
 		where s_id = #{s_id} and date(s_stime) = #{s_stime}
 	</select>
-
+	
+	<!-- 아이디로 스케줄 데이터 가져오기 -->
 	<select id="getScheduleById" parameterType="com.sdAcademy.fp.scheduler.Schedule" resultType="com.sdAcademy.fp.scheduler.Schedule">		
 		select * from sep16_schedule,sep16_member where s_id = #{s_id} and s_id = m_id 
 	</select>
 	
+	<!-- 스케줄 등록하기 -->
 	<insert id="scheduleInsert" parameterType="com.sdAcademy.fp.scheduler.Schedule">
 		insert into sep16_schedule
 		values(0,#{s_id},#{s_content},date_format(#{s_stime},'%Y-%m-%d
@@ -19,6 +22,7 @@
 		%H:%i'),#{s_part},#{s_partKor},#{s_todocheck},#{s_color},#{s_allday})
 	</insert>
 	
+	<!-- 오늘 일자와 가까운 날짜 4개 스케줄 가져오기 -->
 	<select id="getScheduleListLimit4" parameterType="com.sdAcademy.fp.scheduler.Schedule" resultType="com.sdAcademy.fp.scheduler.Schedule">
 		select * 
 		from sep16_schedule 
@@ -36,6 +40,39 @@
 		order by s_stime;
 	</select>
 	
+	<!-- 스케줄 날짜만 업데이트 하기 -->
+	<update id="scheduleUpdateDate" parameterType="com.sdAcademy.fp.scheduler.Schedule">
+	
+	update sep16_schedule set s_stime=#{s_stime},s_etime=#{s_etime} where s_no =#{s_no}
+	
+	</update>
+	
+	<!-- 번호에 맞는 스케줄 데이터 가져오기 -->
+	<select id="getScheduleByNo" parameterType="com.sdAcademy.fp.scheduler.Schedule" resultType="com.sdAcademy.fp.scheduler.Schedule" >
+	
+	select * from sep16_schedule where s_no = #{s_no}
+	
+	</select>
+	
+	<!-- 내가 등록한 최근 스케줄 가져오기 -->
+	<select id="getScheduleNew" parameterType="com.sdAcademy.fp.scheduler.Schedule" resultType="com.sdAcademy.fp.scheduler.Schedule">
+	select * from sep16_schedule where s_id = #{s_id} order by s_no desc limit 1
+	
+	</select>
+	
+	<!-- 번호에 맞는 스케줄 삭제 -->
+	<delete id="scheduleDelete" parameterType="com.sdAcademy.fp.scheduler.Schedule">
+	
+	delete from sep16_schedule where s_no =#{s_no}
+	
+	</delete>
+	
+	<!-- 스케줄 전부다 업데이트하기 -->
+	<update id="scheduleUpdateAll" parameterType="com.sdAcademy.fp.scheduler.Schedule">
+	
+	update sep16_schedule set s_content =#{s_content},s_stime=#{s_stime},s_etime=#{s_etime},s_part=#{s_part},s_partKor=#{s_partKor},s_todocheck=#{s_todocheck},s_allday= #{s_allday},s_color=#{s_color} where s_no= #{s_no}
+	
+	</update>
 	
 	
 	

@@ -22,7 +22,7 @@ public class MemberController {
 	public void loginDo(HttpServletResponse response, HttpServletRequest request, Member inputMember) {
 		mDAO.login(request, inputMember);
 		try {
-			response.sendRedirect("/");
+			response.sendRedirect("/fp/");
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -40,7 +40,7 @@ public class MemberController {
 		mDAO.joinMember(request, m);
 		mDAO.login(request, m);
 		try {
-			response.sendRedirect("/");
+			response.sendRedirect("/fp/");
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -52,7 +52,7 @@ public class MemberController {
 	public void logout(HttpServletRequest request, HttpServletResponse response) {
 		mDAO.logout(request);
 		try {
-			response.sendRedirect("/");
+			response.sendRedirect("/fp/");
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

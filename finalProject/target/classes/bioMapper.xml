@@ -7,16 +7,16 @@
 	</select>
 -->
 	<select id="getBioData" resultType="com.sdAcademy.fp.bio.Bio" parameterType="com.sdAcademy.fp.member.Member">
-		select w_sleep,w_exer,w_drink,w_fast from sep06_weekJ where week(w_date)=week(curdate()) and w_id=#{m_id}
+		select w_sleep,w_exer,w_drink,w_fast from sep06_weekJ where week(w_date)=week(curdate()) and w_id=#{m_id} order by w_date
 	</select>
 		<select id="getCountBioData" resultType="java.lang.Integer" parameterType="com.sdAcademy.fp.member.Member">
 		select count(*) from sep06_weekJ where week(w_date)=week(curdate()) and w_id=#{m_id}
 	</select>
 	<select id="getBioMonthData" resultType="com.sdAcademy.fp.bio.Bio" parameterType="com.sdAcademy.fp.member.Member">
-		select w_sleep,w_exer,w_drink,w_fast from sep06_weekJ where year(w_date)=year(curdate()) and month(w_date)=month(curdate())and w_id=#{m_id}
+		select w_sleep,w_exer,w_drink,w_fast from sep06_weekJ where year(w_date)=year(curdate()) and month(w_date)=month(curdate())and w_id=#{m_id} order by w_date
 	</select>
 	<select id="getMonthWeek" resultType="com.sdAcademy.fp.bio.MonthWeek" parameterType="com.sdAcademy.fp.member.Member">
-		select concat(month(w_date),'월 ',week(w_date)-week(date_format(curdate(),'%y-%m-01'))+1,'주차') as monthweek from sep06_weekJ where month(w_date)=month(curdate()) and w_id=#{m_id}	
+		select concat(month(w_date),'월 ',week(w_date)-week(date_format(curdate(),'%y-%m-01'))+1,'주차') as monthweek from sep06_weekJ where month(w_date)=month(curdate()) and w_id=#{m_id} order by w_date	
 	</select>
 	<select id="getMemberByID" parameterType="com.sdAcademy.fp.bio.Bio" resultType="com.sdAcademy.fp.member.Member">
 		select * from sep20_mem where m_id = #{m_id}

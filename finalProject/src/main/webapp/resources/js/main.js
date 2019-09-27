@@ -214,13 +214,17 @@ var calendar = $('#calendar').fullCalendar({
     //리사이즈한 일정 업데이트
     $.ajax({
       type: "get",
-      url: "",
+      url: "scheduleUpdateDate",
       data: {
-        //id: event._id,
-        //....
+    	  s_no : event._id,
+    	  s_id:userId,
+          s_stime : newDates.startDate,
+          s_etime : newDates.endDate
       },
       success: function (response) {
         alert('수정: ' + newDates.startDate + ' ~ ' + newDates.endDate);
+        $('#scheduleBoardFrame').empty();
+        ScheduleForLimit4(response);
       }
     });
 
@@ -249,12 +253,17 @@ var calendar = $('#calendar').fullCalendar({
     //드롭한 일정 업데이트
     $.ajax({
       type: "get",
-      url: "",
+      url: "scheduleUpdateDate",
       data: {
-        //...
+        s_no : event._id,
+        s_id :userId,
+        s_stime : newDates.startDate,
+        s_etime : newDates.endDate
       },
       success: function (response) {
         alert('수정: ' + newDates.startDate + ' ~ ' + newDates.endDate);
+        $('#scheduleBoardFrame').empty();
+        ScheduleForLimit4(response);
       }
     });
 

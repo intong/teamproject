@@ -4,6 +4,8 @@ import java.util.List;
 
 public class Schedules {
 private List<Schedule> schedule;
+
+private Schedule sch;
 	
 	
 	public Schedules() {
@@ -11,10 +13,26 @@ private List<Schedule> schedule;
 	}
 
 
+	
+
+
 	public Schedules(List<Schedule> schedule) {
 		super();
 		this.schedule = schedule;
 	}
+
+
+
+
+
+	public Schedules(List<Schedule> schedule, Schedule sch) {
+		super();
+		this.schedule = schedule;
+		this.sch = sch;
+	}
+
+
+
 
 
 	public List<Schedule> getSchedule() {
@@ -25,5 +43,23 @@ private List<Schedule> schedule;
 	public void setSchedule(List<Schedule> schedule) {
 		this.schedule = schedule;
 	}
+
+
+
+
+
+	public Schedule getSch() {
+		return sch;
+	}
+
+
+
+
+
+	public void setSch(Schedule sch) {
+		this.sch = sch;
+	}
+	
+	
 
 }

@@ -24,68 +24,7 @@ public class BioDAO {
 	@Autowired
 	private SqlSession ss;
 
-	/*
-	public void getData() {
-		// DB에 등록
-		Connection con = null;
-		PreparedStatement pstmt = null;
-		try {
-			Class.forName("oracle.jdbc.driver.OracleDriver");
-			con = DriverManager.getConnection("jdbc:oracle:thin:@192.168.0.46:1521:xe", "bhx", "7165");
-			String query = "insert into aug20_test values(?,?,?)";
-			pstmt = con.prepareStatement(query);
 
-			FileReader fr = new FileReader("C:\\Users\\SDEDU03\\Desktop\\project\\Final_test.txt");
-			BufferedReader br = new BufferedReader(fr);
-
-			String data = "";
-			while ((data = br.readLine()) != null) {
-				// \t : tab키, \\s : 공백으로 잘라 array에 넣어주겠다.
-				String array[] = data.split("[\t, \\s]");
-				pstmt.setString(1, array[0]);
-				pstmt.setString(2, array[1]);
-				pstmt.setString(3, array[2]);
-				pstmt.executeUpdate();
-			}
-			br.close();
-			pstmt.close();
-			con.close();
-
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
-
-	public void doWhatData() {
-		// DB에 등록
-		Connection con = null;
-		PreparedStatement pstmt = null;
-		try {
-			Class.forName("oracle.jdbc.driver.OracleDriver");
-			con = DriverManager.getConnection("jdbc:oracle:thin:@192.168.0.46:1521:xe", "bhx", "7165");
-			String query = "insert into aug22_test values(?,?)";
-			pstmt = con.prepareStatement(query);
-
-			FileReader fr = new FileReader("C:\\Users\\SDEDU03\\Desktop\\project\\doWhatResultC.txt");
-			BufferedReader br = new BufferedReader(fr);
-
-			String data = "";
-			while ((data = br.readLine()) != null) {
-				// \t : tab키, \\s : 공백으로 잘라 array에 넣어주겠다.
-				String array[] = data.split("\t");
-				pstmt.setString(1, array[0]);
-				pstmt.setString(2, array[1]);
-				pstmt.executeUpdate();
-			}
-			br.close();
-			pstmt.close();
-			con.close();
-
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
-	*/
 
 	public int insertCheck(Member m, HttpServletRequest request) {
 		// System.out.println(req.getSession().getAttribute("m"));
@@ -243,7 +182,7 @@ public class BioDAO {
 	// FlaskWas를 통한 딥러닝 AI 결과 도출
 	public void getBiorythm(Bio b, HttpServletRequest request) {
 		try {
-			String s = String.format("http://192.168.0.71:9999/biorythm.get?sleep=%f&exercise=%f&drink=%f&fast=%f",
+			String s = String.format("http://59.9.140.27:9999/biorythm.get?sleep=%f&exercise=%f&drink=%f&fast=%f",
 					b.getW_sleep(), b.getW_exer(), b.getW_drink(), b.getW_fast());
 			URL u = new URL(s);
 			HttpURLConnection huc = (HttpURLConnection) u.openConnection();

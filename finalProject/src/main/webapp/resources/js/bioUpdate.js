@@ -28,7 +28,7 @@ $(function() {
 		var sleep = $('input[name="sleep"]:checked').val();
 		var exercise = $('input[name="exercise"]:checked').val();
 		var drink = $('input[name="drink"]:checked').val();
-		alert(drink);
+		
 		var fast = $('input[name="fast"]:checked').val();
 		$.ajax({
 			url : "biorythm.update.done",

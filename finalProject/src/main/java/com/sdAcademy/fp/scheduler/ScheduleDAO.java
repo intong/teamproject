@@ -42,7 +42,13 @@ public class ScheduleDAO {
 		
 		
 	}*/
-	
+	// 가까운 4개 날짜 스케줄 가져오는 메서드 
+	private Schedules getScheduleLimit4(Schedule s) {
+		List<Schedule> schedules = ss.getMapper(ScheduleMapper.class).getScheduleListLimit4(s);
+		Schedules result = new Schedules(schedules);
+		return result;
+		
+	}
 	
 	// 날짜로 스케줄가져와서 JSON으로 보내줄 schedules 리턴(챗봇에 사용되는 json)
 	public Schedules getScheduleByDate(Schedule s) {
@@ -65,18 +71,22 @@ public class ScheduleDAO {
 	
 	// 스케줄 등록하는 메서드 
 	public Schedules scheduleInsert(Schedule s, HttpServletRequest request) {
+		Schedule sche = null;
 		
 		try {
 			if (ss.getMapper(ScheduleMapper.class).scheduleInsert(s) == 1) {
 				System.out.println("성공");
+				sche = ss.getMapper(ScheduleMapper.class).getScheduleNew(s);
 			} else {
 				System.out.println("망했따! 도랐따!");
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		List<Schedule> schedules = ss.getMapper(ScheduleMapper.class).getScheduleListLimit4(s);
-		Schedules result = new Schedules(schedules);
+		
+		
+		Schedules result = getScheduleLimit4(s);
+		result.setSch(sche);
 		
 		return result;
 	}
@@ -85,9 +95,63 @@ public class ScheduleDAO {
 	// 스케줄 게시판 출력용 JSON 메서드
 	public Schedules getScheduleBoadJSON(Schedule s, HttpServletRequest request) {
 		s.setS_id(request.getParameter("s_id"));
-		List<Schedule> schedules = ss.getMapper(ScheduleMapper.class).getScheduleListLimit4(s);
-		Schedules result = new Schedules(schedules);
-		return result;
+		return getScheduleLimit4(s);
 	} 
+	
+	
+	
+	
+	// 스케줄 날짜 변경 메서드
+	public Schedules scheduleUpdateDate(Schedule s) {
+		
+		if(ss.getMapper(ScheduleMapper.class).scheduleUpdateDate(s)==1) {
+			System.out.println("이얏호응 성공");
+		}else {
+			System.out.println("망함 ㅋㅋㅋㅋ");
+		}
+		
+	
+	 
+	 return  getScheduleLimit4(s);
+		
+		
+		
+	}
+	
+	// 스케줄 삭제 메서드
+	
+	public Schedules scheduleDelete(Schedule s) {
+		
+		if(ss.getMapper(ScheduleMapper.class).scheduleDelete(s)==1) {
+			
+			System.out.println("이얏호응 성공");
+		}else {
+			System.out.println("망함 ㅋㅋㅋㅋ");
+		}
+		
+		
+		 
+		 return getScheduleLimit4(s);
+		
+	}
+	
+	// 스케줄 전부다 업데이트 메서드
+	public Schedules scheduleUpdateAll(Schedule s) {
+		
+		if(ss.getMapper(ScheduleMapper.class).scheduleUpdateAll(s)==1) {
+			System.out.println("이얏호응 성공");
+		}else {
+			System.out.println("망함 ㅋㅋㅋㅋ");
+		}
+		
+		
+		return getScheduleLimit4(s);
+	}
+	
+	
+	
+	
+	
+	
 
 } // end of class
