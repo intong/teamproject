@@ -55,5 +55,7 @@ show tables
 
 select * from sep16_member
 
+select * from sep16_schedule where s_id='audidas' order by s_no desc limit 1
+
 
 delete from sep16_schedule where s_no =4;
