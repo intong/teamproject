@@ -3,7 +3,7 @@ var id = $('#memberID').text();
 function jeonjakua(no,partKo){
 	var partner;
 		window.open(
-				'http://59.9.140.27/chatting/chat.go?m_id='+id+'&s_no='+no+'&s_part='+partKo,
+				'http://192.168.0.39/chatting/chat.go?m_id='+id+'&s_no='+no+'&s_part='+partKo,
 				'window_name',
 				'directories=no,titlebar=no,toolbar=no,location=no,status=no,menubar=no,scrollbars=no,resizable=no,width=400px,height=600px,top=300px,left=1000px'
 		);
